@@ -1,0 +1,46 @@
+[gd_scene load_steps=3 format=3 uid="uid://dafck037qcxnx"]
+
+[ext_resource type="Script" uid="uid://cv20qhbtre6r1" path="res://title.gd" id="1_oyqm6"]
+[ext_resource type="Texture2D" uid="uid://c0yj4ucfituu0" path="res://basic.png" id="1_y7k74"]
+
+[node name="TitleScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_oyqm6")
+
+[node name="Logo" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 241.0
+offset_top = 84.74
+offset_right = 1241.0
+offset_bottom = 516.74005
+scale = Vector2(0.67, 0.67)
+texture = ExtResource("1_y7k74")
+
+[node name="Menu" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 445.688
+offset_top = 375.0
+offset_right = 584.68823
+offset_bottom = 478.0
+scale = Vector2(1.875, 1.875)
+
+[node name="Start" type="Button" parent="Menu"]
+layout_mode = 2
+text = "Start"
+
+[node name="credits" type="Button" parent="Menu"]
+layout_mode = 2
+text = "Credits"
+
+[node name="quit" type="Button" parent="Menu"]
+layout_mode = 2
+text = "Quit"
+
+[connection signal="pressed" from="Menu/Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="Menu/credits" to="." method="_on_credits_pressed"]
+[connection signal="pressed" from="Menu/quit" to="." method="_on_quit_pressed"]

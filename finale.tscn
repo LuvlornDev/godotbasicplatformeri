@@ -1,0 +1,33 @@
+[gd_scene load_steps=2 format=3 uid="uid://behkvrji1bj87"]
+
+[ext_resource type="AudioStream" uid="uid://b81tslw8xet1u" path="res://judgement.wav" id="1_4bgcs"]
+
+[node name="finale" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+color = Color(0, 0, 0, 1)
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 418.5
+offset_top = 300.0
+offset_right = 628.5
+offset_bottom = 349.0
+scale = Vector2(1.5, 1.5)
+text = "the end.
+there's nothing else to do..."
+horizontal_alignment = 1
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("1_4bgcs")
+volume_db = -5.049
+autoplay = true

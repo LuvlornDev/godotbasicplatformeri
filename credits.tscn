@@ -1,0 +1,41 @@
+[gd_scene load_steps=2 format=3 uid="uid://bjdbtfd4rb4op"]
+
+[ext_resource type="Script" uid="uid://dalq7t2h2i25" path="res://credits.gd" id="1_nm7lk"]
+
+[node name="CreditsScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_nm7lk")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 64.99999
+offset_top = 34.0
+offset_right = 651.0
+offset_bottom = 291.0
+scale = Vector2(1.74, 1.74)
+text = "Hi! I'm Luvlørn, and this is my base project files for a basic Platformer game!
+
+All files can be found in the game's GitHub repo!
+All the music you hear is made by me (ONLY FILES THAT I WON'T INCLUDE
+IN THE REPO)
+
+Have fun making!
+
+This project is dedicated to Hack Club.
+Thank you for pushing the passions of the young <3."
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 487.25
+offset_top = 500.0
+offset_right = 558.25
+offset_bottom = 531.00037
+scale = Vector2(2.5, 2.5)
+text = "Go Back"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
